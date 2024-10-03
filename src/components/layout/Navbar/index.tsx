@@ -27,7 +27,7 @@ const Navbar = () => {
       <nav className="flex items-center justify-between">
         <ul className="flex items-center justify-between gap-1 text-sm *:cursor-pointer *:p-2 max-sm:hidden">
           {navlink.map(({ name, link }) => (
-            <li key={name}>
+            <li key={name} className="hover:text-neutral-900 hover:font-bold">
               <Link href={link}>{name}</Link>
             </li>
           ))}
