@@ -1,5 +1,3 @@
-import { title } from "process";
-
 const AboutSection = () => {
   return (
     <section
@@ -36,7 +34,7 @@ const AboutSection = () => {
         <p>
           At Nauth, our mission is to safeguard the originality of digital
           artworks by ensuring every NFT is unique. We believe in transparency,
-          trust, and innovation. Whether you're an artist or a collector,
+          trust, and innovation. Whether you&apos;re an artist or a collector,
           we&apos;re here to help protect the integrity of your assets.
         </p>
       </article>
