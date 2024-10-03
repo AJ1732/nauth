@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        "roboto-mono": ["Roboto Mono", "monospace"],
         "disket-mono": ["Disket Mono", "sans-serif"],
       },
       colors: {
