@@ -27,7 +27,7 @@ const Navbar = () => {
       <nav className="flex items-center justify-between">
         <ul className="flex items-center justify-between gap-1 text-sm *:cursor-pointer *:p-2 max-sm:hidden">
           {navlink.map(({ name, link }) => (
-            <li key={name} className="hover:text-neutral-900 hover:font-bold">
+            <li key={name} className="hover:font-bold hover:text-neutral-900">
               <Link href={link}>{name}</Link>
             </li>
           ))}
@@ -37,7 +37,9 @@ const Navbar = () => {
 
         <div className="mr-24 h-5 w-20 rounded-full bg-stone-200" />
 
-        <Button size={"lg"}>verify</Button>
+        <Link href={"/verify"} className="block">
+          <Button size={"lg"}>verify</Button>
+        </Link>
       </nav>
     </header>
   );
