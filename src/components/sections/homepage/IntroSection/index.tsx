@@ -1,6 +1,6 @@
 const IntroSection = () => {
   return (
-    <section className="py-20 lg:py-10">
+    <section className="pb-20 pt-32 lg:pb-10 lg:pt-16">
       <p className="text-justify text-lg leading-10 md:text-xl md:leading-[3rem] lg:text-2xl lg:leading-[4rem]">
         Welcome to <span className="text-purple-500">Nauth</span>, your reliable
         partner in securing the authenticity of digital art. Our innovative
