@@ -8,7 +8,10 @@ const FeatureSection = () => {
           key={id}
           className="flex min-h-80 flex-col justify-between rounded-lg bg-neutral-900/50"
         >
-          <article className="space-y-1 px-4 py-6">
+          <article className="relative h-full max-h-48 space-y-1 px-4 py-6">
+            <div className="absolute left-0 top-0 -z-[1] aspect-square w-10 border-l border-t border-purple-500" />
+            <div className="absolute bottom-0 right-0 -z-[1] aspect-square w-10 border-b border-r border-purple-500" />
+
             <h3 className="font-disket-mono">{title}</h3>
             <p className="text-neutral-400">{paragraph}</p>
           </article>
