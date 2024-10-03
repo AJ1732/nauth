@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { AlignLeft } from "lucide-react";
 
 const navlink = [
   {
@@ -24,7 +25,7 @@ const Navbar = () => {
   return (
     <header className="content-grid fixed z-50 w-full bg-purple-500 py-6 font-disket-mono">
       <nav className="flex items-center justify-between">
-        <ul className="flex items-center justify-between max-sm:hidden gap-1 text-sm *:cursor-pointer *:p-2">
+        <ul className="flex items-center justify-between gap-1 text-sm *:cursor-pointer *:p-2 max-sm:hidden">
           {navlink.map(({ name, link }) => (
             <li key={name}>
               <Link href={link}>{name}</Link>
@@ -32,7 +33,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        
+        <AlignLeft className="sm:hidden" />
 
         <div className="mr-24 h-5 w-20 rounded-full bg-stone-200" />
 
