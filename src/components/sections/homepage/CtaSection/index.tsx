@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const CtaSection = () => {
   return (
@@ -7,9 +8,12 @@ const CtaSection = () => {
         <h2 className="text-center font-disket-mono text-[2rem] md:text-3xl lg:text-5xl">
           Ready to Authenticate Your Art?
         </h2>
-        <Button variant={"primary"} size={"lg"}>
-          Get Started
-        </Button>
+        
+        <Link href={"/verify"}>
+          <Button variant={"primary"} size={"lg"}>
+            Get Started
+          </Button>
+        </Link>
       </div>
     </section>
   );

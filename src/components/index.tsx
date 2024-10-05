@@ -10,6 +10,7 @@ export { default as HPCtaSection } from "./sections/homepage/CtaSection";
 
 // DEMOPAGE
 export { default as StepsSection } from "./sections/demopage/StepsSection";
+export { default as DPIntroSection } from "./sections/demopage/IntroSection";
 export { default as DPCtaSection } from "./sections/demopage/CtaSection";
 
 // UI BUILD COMPONENTS
