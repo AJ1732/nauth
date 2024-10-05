@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaXTwitter } from "react-icons/fa6";
 
 const navlink = [
   {
@@ -35,7 +36,11 @@ const Footer = () => {
           </ul>
         </nav>
 
-        <div className="size-10 rounded-lg bg-purple-500"></div>
+        <div className="flex size-10 items-center justify-center">
+          <Link href={"https://x.com/Nauth_Nft"} target="_blank">
+            <FaXTwitter className="text-2xl hover:text-purple-500" />
+          </Link>
+        </div>
       </div>
     </footer>
   );

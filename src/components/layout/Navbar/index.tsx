@@ -9,7 +9,7 @@ const navlink = [
   },
   {
     name: "About",
-    link: "#about",
+    link: "/#about",
   },
   {
     name: "How It Works",
