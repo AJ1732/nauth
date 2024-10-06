@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Anim } from "./components";
 
@@ -16,10 +17,12 @@ const HeroSection = () => {
             Verify the uniqueness and provenance of your NFTs before minting
             with our cutting-edge binary comparison technology
           </p>
-
-          <Button className="mt-12" variant={"secondary"} size={"lg"}>
-            Get Started
-          </Button>
+          
+          <Link href={"/verify"}>
+            <Button className="mt-12" variant={"secondary"} size={"lg"}>
+              Get Started
+            </Button>
+          </Link>
         </div>
 
         <div className="flex size-full max-w-xl items-center justify-center">
