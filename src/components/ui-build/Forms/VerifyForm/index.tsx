@@ -28,7 +28,7 @@ import { useValueContext } from "@/context/provider";
 import { FormSchema } from "./schema";
 
 function VerifyForm() {
-  const { setIsMinted } = useValueContext();
+  const { setIsMinted, setProvenance } = useValueContext();
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -44,6 +44,13 @@ function VerifyForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
+    setProvenance((prev) => ({
+      ...prev,
+      artistName: data.artistName,
+      uploadDate: data.dateOfCreation,
+      mintedOn: new Date().toISOString()
+    }));
+
     toast({
       title: "You submitted the following values:",
       description: (
@@ -159,7 +166,10 @@ function VerifyForm() {
             <FormItem>
               <FormLabel>License/Ownership Details</FormLabel>
               <FormControl>
-                <Select {...field}>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
                   <SelectTrigger>
                     <SelectValue placeholder="Select a license" />
                   </SelectTrigger>
@@ -189,7 +199,12 @@ function VerifyForm() {
               <FormControl>
                 <Input
                   placeholder="Enter social media or website links"
-                  {...field}
+                  value={field.value.join(", ")} // display as a string
+                  onChange={(e) =>
+                    field.onChange(
+                      e.target.value.split(",").map((url) => url.trim()),
+                    )
+                  } // transform back to array
                 />
               </FormControl>
               <FormDescription>

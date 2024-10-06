@@ -40,8 +40,9 @@ export const FormSchema = z.object({
     errorMap: () => ({ message: "You must select a valid license." }),
   }),
 
-  // Social Links (Optional)
+  // Social Links (Optional) - Ensure it expects an array
   socialLinks: z
     .array(z.string().url({ message: "Must be a valid URL." }))
-    .optional(),
+    .optional()
+    .default([]),
 });

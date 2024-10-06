@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageLayout } from "@/components";
+import { Toaster } from "@/components/ui/toaster";
 import ContextProvider from "@/context/provider";
 import "./globals.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body className={`font-roboto-mono antialiased`}>
         <ContextProvider>
           <PageLayout>{children}</PageLayout>
+          <Toaster />
         </ContextProvider>
       </body>
     </html>
