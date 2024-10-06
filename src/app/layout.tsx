@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageLayout } from "@/components";
+import ContextProvider from "@/context/provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -41,7 +42,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-roboto-mono antialiased`}>
-        <PageLayout>{children}</PageLayout>
+        <ContextProvider>
+          <PageLayout>{children}</PageLayout>
+        </ContextProvider>
       </body>
     </html>
   );
