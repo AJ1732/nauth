@@ -35,7 +35,9 @@ const Navbar = () => {
 
         <AlignLeft className="sm:hidden" />
 
-        <div className="mr-24 h-5 w-20 rounded-full bg-stone-200" />
+        <div className="mr-24 flex h-5 w-20 items-center justify-center rounded-full bg-stone-200 text-center font-bold text-neutral-800">
+          <span>nauth</span>
+        </div>
 
         <Link href={"/verify"} className="block">
           <Button size={"lg"}>verify</Button>

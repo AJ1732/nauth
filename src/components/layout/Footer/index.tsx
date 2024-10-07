@@ -24,7 +24,9 @@ const Footer = () => {
   return (
     <footer className="full-width content-grid bg-neutral-950 py-20">
       <div className="flex items-center justify-between gap-10 max-md:flex-col">
-        <div className="h-5 w-20 rounded-full bg-stone-200" />
+        <div className="mr-24 flex h-5 w-20 items-center justify-center rounded-full bg-stone-200 text-center font-bold text-neutral-800">
+          <span>nauth</span>
+        </div>
 
         <nav>
           <ul className="flex items-center justify-between gap-6 text-sm *:cursor-pointer *:p-2">

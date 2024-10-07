@@ -9,8 +9,8 @@ const FeatureSection = () => {
           className="flex min-h-60 flex-col justify-between rounded-lg bg-neutral-900/50"
         >
           <article className="relative h-full max-h-40 space-y-1 px-4 py-6">
-            <div className="absolute left-0 top-0 -z-[1] aspect-square w-10 border-l border-t border-purple-500" />
-            <div className="absolute bottom-0 right-0 -z-[1] aspect-square w-10 border-b border-r border-purple-500" />
+            <div className="absolute left-0 top-0 -z-[1] aspect-square w-6 border-l border-t border-purple-500" />
+            <div className="absolute bottom-0 right-0 -z-[1] aspect-square w-6 border-b border-r border-purple-500" />
 
             <h3 className="font-disket-mono">{title}</h3>
             <p className="text-neutral-400">{paragraph}</p>
@@ -20,10 +20,10 @@ const FeatureSection = () => {
             <div className="absolute -bottom-4 -left-12 *:stroke-neutral-800">
               {icon}
             </div>
-            <div className="absolute -bottom-4 left-20 *:stroke-purple-500/80">
+            <div className="absolute -bottom-4 z-[1] left-20 *:stroke-purple-500/80">
               {icon}
             </div>
-            <div className="absolute -bottom-4 left-60 -z-[1] *:stroke-neutral-800">
+            <div className="absolute -bottom-4 left-60  *:stroke-neutral-800">
               {icon}
             </div>
           </div>
