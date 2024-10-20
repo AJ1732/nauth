@@ -1,5 +1,8 @@
+"use client";
 import Link from "next/link";
+import Image from "next/image";
 import { FaXTwitter } from "react-icons/fa6";
+import logo from "@/assets/img/nauth-logo.jpg";
 
 const navlink = [
   {
@@ -24,7 +27,16 @@ const Footer = () => {
   return (
     <footer className="full-width content-grid bg-neutral-950 py-20">
       <div className="flex items-center justify-between gap-10 max-md:flex-col">
-        <div className="h-5 w-20 rounded-full bg-stone-200" />
+        <figure
+          onClick={() => {
+            document.getElementById("home-section")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          className="relative size-20 rounded-full bg-stone-200 md:mr-24"
+        >
+          <Image src={logo} alt="logo" fill />
+        </figure>
 
         <nav>
           <ul className="flex items-center justify-between gap-6 text-sm *:cursor-pointer *:p-2">

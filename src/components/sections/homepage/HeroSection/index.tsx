@@ -4,7 +4,10 @@ import { Anim } from "./components";
 
 const HeroSection = () => {
   return (
-    <section className="breakout relative pb-12 pt-20 lg:pt-16">
+    <section
+      id="home-section"
+      className="breakout relative pb-12 pt-20 lg:pt-16"
+    >
       <div className="relative flex items-center justify-between gap-40 max-lg:flex-col lg:gap-10">
         {/* <div className="fixed left-40 -z-[1] aspect-square w-80 rounded-full bg-purple-400/10 blur-lg" /> */}
 
@@ -17,7 +20,7 @@ const HeroSection = () => {
             Verify the uniqueness and provenance of your NFTs before minting
             with our cutting-edge binary comparison technology
           </p>
-          
+
           <Link href={"/verify"}>
             <Button className="mt-12" variant={"secondary"} size={"lg"}>
               Get Started

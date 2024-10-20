@@ -48,7 +48,7 @@ const Anim = () => {
     <div className="grid size-full max-w-md grid-cols-3 font-disket-mono grid-rows-8 gap-4 text-xs text-">
       {col.map(({ id, className }) => (
         <RotateGradientCard key={id} className={className}>
-          {id}
+          {/* {id} */}
         </RotateGradientCard>
       ))}
     </div>

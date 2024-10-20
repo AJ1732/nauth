@@ -8,9 +8,9 @@ const FeatureSection = () => {
           key={id}
           className="flex min-h-60 flex-col justify-between rounded-lg bg-neutral-900/50"
         >
-          <article className="relative h-full max-h-40 space-y-1 px-4 py-6">
-            <div className="absolute left-0 top-0 -z-[1] aspect-square w-10 border-l border-t border-purple-500" />
-            <div className="absolute bottom-0 right-0 -z-[1] aspect-square w-10 border-b border-r border-purple-500" />
+          <article className="relative h-full max-h-40 space-y-1 px-4 py-6 lg:max-h-44">
+            <div className="absolute left-0 top-0 -z-[1] aspect-square w-6 border-l border-t border-purple-500" />
+            <div className="absolute bottom-0 right-0 -z-[1] aspect-square w-6 border-b border-r border-purple-500" />
 
             <h3 className="font-disket-mono">{title}</h3>
             <p className="text-neutral-400">{paragraph}</p>
@@ -20,10 +20,10 @@ const FeatureSection = () => {
             <div className="absolute -bottom-4 -left-12 *:stroke-neutral-800">
               {icon}
             </div>
-            <div className="absolute -bottom-4 left-20 *:stroke-purple-500/80">
+            <div className="absolute -bottom-4 left-28 *:stroke-purple-500/80 md:left-20">
               {icon}
             </div>
-            <div className="absolute -bottom-4 left-60 -z-[1] *:stroke-neutral-800">
+            <div className="absolute -bottom-4 left-72 -z-[1] *:stroke-neutral-800 md:left-60">
               {icon}
             </div>
           </div>
@@ -41,7 +41,10 @@ const features = [
     paragraph:
       "We convert digital artwork to binary and compare them to our database to ensure uniqueness before minting.",
     icon: (
-      <ActionKeySVG className="size-60 opacity-50 *:stroke-2" strokeColor="" />
+      <ActionKeySVG
+        className="h-96 w-96 opacity-50 *:stroke-2 md:h-64 md:w-64 lg:h-60 lg:w-60"
+        strokeColor=""
+      />
     ),
   },
   {
@@ -51,7 +54,7 @@ const features = [
       "Integration with leading NFT marketplaces to authenticate NFTs in real-time.",
     icon: (
       <SwitchAccessSVG
-        className="size-60 opacity-50 *:stroke-2"
+        className="h-96 w-96 opacity-50 *:stroke-2 md:h-64 md:w-64 lg:h-60 lg:w-60"
         strokeColor=""
       />
     ),
@@ -62,7 +65,10 @@ const features = [
     paragraph:
       "Data-backed verification visible to buyers and creators, ensuring trust in every transaction.",
     icon: (
-      <SecuritySVG className="size-60 opacity-50 *:stroke-2" strokeColor="" />
+      <SecuritySVG
+        className="h-96 w-96 opacity-50 *:stroke-2 md:h-64 md:w-64 lg:h-60 lg:w-60"
+        strokeColor=""
+      />
     ),
   },
 ];

@@ -1,7 +1,7 @@
 const AboutSection = () => {
   return (
     <section
-      id="about"
+      id="about-section"
       className="space-y-16 py-28 lg:py-20 [&_article]:space-y-1 [&_article_h3]:text-xl [&_article_p]:text-neutral-300/90"
     >
       <article>
