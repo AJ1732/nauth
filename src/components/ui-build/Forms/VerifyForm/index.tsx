@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -29,13 +28,7 @@ import { useValueContext } from "@/context/provider";
 import { FormSchema } from "./schema";
 
 function VerifyForm() {
-  const [files, setFiles] = useState<File[]>([]);
   const { setIsMinted, setProvenance } = useValueContext();
-
-  const handleFileUpload = (files: File[]) => {
-    setFiles(files);
-    console.log(files);
-  };
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
