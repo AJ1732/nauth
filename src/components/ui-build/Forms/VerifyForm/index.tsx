@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -24,11 +24,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { FileUpload } from "@/components/ui/file-upload";
 import { useValueContext } from "@/context/provider";
 import { FormSchema } from "./schema";
 
 function VerifyForm() {
+  const [files, setFiles] = useState<File[]>([]);
   const { setIsMinted, setProvenance } = useValueContext();
+
+  const handleFileUpload = (files: File[]) => {
+    setFiles(files);
+    console.log(files);
+  };
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -48,7 +55,7 @@ function VerifyForm() {
       ...prev,
       artistName: data.artistName,
       uploadDate: data.dateOfCreation,
-      mintedOn: new Date().toISOString()
+      mintedOn: new Date().toISOString(),
     }));
 
     toast({
@@ -76,7 +83,7 @@ function VerifyForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Upload NFT Image</FormLabel>
-              <FormControl>
+              {/* <FormControl>
                 <Input
                   placeholder="Upload an image"
                   id="nft"
@@ -84,7 +91,15 @@ function VerifyForm() {
                   accept=".jpg, .png, .gif"
                   onChange={(e) => field.onChange(e.target.files)}
                 />
-              </FormControl>
+              </FormControl> */}
+              {/* New component to replace the abive */}
+              {/* <FileUpload onChange={handleFileUpload} /> */}
+              <FileUpload
+                onChange={(files) => {
+                  field.onChange(files); // Pass files to form state
+                }}
+              />
+
               <FormDescription>
                 After verification, your artwork will be minted as an NFT on the
                 Solana blockchain, with full provenance and metadata recorded
