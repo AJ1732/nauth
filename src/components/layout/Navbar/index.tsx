@@ -57,6 +57,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
+              onClick={() => setOpenMobileNav(false)}
               className="absolute inset-x-0 top-[140%] flex min-h-[50dvh] flex-col items-center justify-center gap-8 rounded-lg border border-neutral-700 bg-neutral-950 px-4 py-8"
             >
               <li className="hover:font-bold hover:text-purple-500">
