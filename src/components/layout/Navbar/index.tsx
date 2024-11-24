@@ -29,7 +29,7 @@ const Navbar = () => {
                 });
               }}
             >
-              about
+              <Link href="/">about</Link>
             </button>
           </li>
 
@@ -42,16 +42,18 @@ const Navbar = () => {
 
         <AlignLeft className="sm:hidden" />
 
-        <figure
-          onClick={() => {
-            document.getElementById("home-section")?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-          className="relative mr-24 size-20 rounded-full bg-stone-200"
-        >
-          <Image src={logo} alt="logo" fill />
-        </figure>
+        <Link href="/">
+          <figure
+            onClick={() => {
+              document.getElementById("home-section")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+            className="relative mr-24 size-20 rounded-full bg-stone-200"
+          >
+            <Image src={logo} alt="logo" fill />
+          </figure>
+        </Link>
 
         <Link href={"/verify"} className="block">
           <Button size={"lg"}>verify</Button>

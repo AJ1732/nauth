@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import NextTopLoader from "nextjs-toploader";
 import { PageLayout } from "@/components";
 import { Toaster } from "@/components/ui/toaster";
 import ContextProvider from "@/context/provider";
@@ -43,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-roboto-mono antialiased`}>
+        <NextTopLoader color="#171717" />
         <ContextProvider>
           <PageLayout>{children}</PageLayout>
           <Toaster />
